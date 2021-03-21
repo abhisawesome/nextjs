@@ -1,0 +1,16 @@
+version: '3.9'
+services: 
+  node:
+    container_name: build-out-new
+    build: .
+    volumes: 
+      - ./build:/app/out
+
+  nginx:
+    image: nginx:latest
+    volumes: 
+     - ./build/:/usr/share/nginx/html/test
+    depends_on: 
+      - node
+    ports: 
+      - 8080:80
