@@ -7,7 +7,7 @@ export default function Home() {
       In index
       <ul>
             <li>
-                <Link href="/home">
+                <Link href='/home'>
                     <a>Home</a>
                 </Link>
             </li>
